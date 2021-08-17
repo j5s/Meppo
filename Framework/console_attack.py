@@ -68,9 +68,6 @@ def run_moudle(*args):
             for i in get_payload(args[0]):
                 poolmana(i[0], args[1])
 
-def run_exp(*args):
-    if len(args)==3:
-        record_res(eval(args[0]).exp(args[1],args[2]))
 
 if __name__ == '__main__':
     run_poc('zabbix_admin',"http://127.0.0.1")
