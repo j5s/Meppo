@@ -41,8 +41,6 @@ def Console():
             if args.url:
                 console_attack.run_poc(args.poc, args.url)
             elif args.file:
-                print(args.file)
-                print(get_urls(args.file))
                 console_attack.run_poc(args.poc, get_urls(args.file))
             else:
                 print("Usage:\n\tpython Meppo.py -poc xxx -u http:xxx\n\tpython Meppo.py -poc xxx -f target.txt")
@@ -57,8 +55,7 @@ def Console():
             elif args.file:
                 console_attack.run_moudle(args.moudle, get_urls(args.file))
             else:
-                print(
-                    "Usage:\n\tpython Meppo.py -m -l\n\tpython Meppo.py -m xxx -u http:xxx\n\tpython Meppo.py -m -f target.txt")
+                print("Usage:\n\tpython Meppo.py -m -l\n\tpython Meppo.py -m xxx -u http:xxx\n\tpython Meppo.py -m -f target.txt")
         except:
             print("Usage:\n\tpython Meppo.py -m -l\n\tpython Meppo.py -m xxx -u http:xxx\n\tpython Meppo.py -m -f target.txt")
     elif args.list:
